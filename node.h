@@ -17,9 +17,11 @@ struct Node {
     }
 
     void killSelf() {
+    	
         if(next){
         	next->killSelf();
         }
+
         delete this;
 
     }
