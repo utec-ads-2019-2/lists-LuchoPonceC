@@ -177,14 +177,19 @@ class LinkedList : public List<T> {
 
         BidirectionalIterator<T> begin() {
             // TODO
+            return BidirectionalIterator<T>(this->head);
         }
 
 	    BidirectionalIterator<T> end() {
             // TODO
+            return BidirectionalIterator<T>(nullptr);
         }
 
         void merge(LinkedList<T> list) {
             // TODO
+            for (BidirectionalIterator<T> iterator = list.begin(); iterator!=list.end();++iterator){
+                this->push_back(*iterator);
+            }
         }
 
         void copy(T *arr, int &pos){
