@@ -70,6 +70,7 @@ class ForwardList : public List<T> {
                 throw std::bad_alloc();
             }
             else{
+                // Controlas muchos casos, podrías reducir un poco el código
                 Node<T> *temp = this->head;
                 if(this->head->next == nullptr){
                     this->head = nullptr;

@@ -11,11 +11,13 @@ class CircularLinkedList : public List<T> {
 
         T front() {
             // TODO
+            // Y caso vacío?
             return this->head->data;
         }
 
         T back() {
             // TODO
+            // Y caso vacío?
             return this->head->prev->data;
         }
 
@@ -57,6 +59,7 @@ class CircularLinkedList : public List<T> {
 
         void pop_front() {
             // TODO
+            // No es 
             if(this->head == nullptr){
                 throw std::bad_alloc();
             }
@@ -97,6 +100,7 @@ class CircularLinkedList : public List<T> {
         }
 
         T operator[](int index) {
+            // caso negativo? 
             // TODO
             index = index%this->nodes;
             Node<T> *temp = this->head;
@@ -181,6 +185,7 @@ class CircularLinkedList : public List<T> {
 
 	    BidirectionalIterator<T> end() {
             // TODO
+            // Cómo manejarías el caso de iterar con while?
             return BidirectionalIterator<T>(this->head->prev);
         }
 
